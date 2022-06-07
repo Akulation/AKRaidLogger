@@ -1,7 +1,6 @@
+![AkuRaidLogger](https://user-images.githubusercontent.com/69092135/172501443-656211c5-6e9f-41ea-be22-6217b0067c13.png)
 # AkuRaidLogger
 Send a discord webhook when a structure or barricade is destroyed
-
-![AkuRaidLogger](https://user-images.githubusercontent.com/69092135/172501443-656211c5-6e9f-41ea-be22-6217b0067c13.png)
 
 # Features:
   Logs whenever a structure/barricade is destroyed
