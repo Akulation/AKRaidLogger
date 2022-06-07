@@ -3,9 +3,9 @@
 Send a discord webhook when a structure or barricade is destroyed
 
 # Features:
-  Logs whenever a structure/barricade is destroyed
-  Lag Free
-  Clean looking embeds
+-  Logs whenever a structure/barricade is destroyed
+-  Lag Free
+-  Clean looking embeds
  
 # Config:
   ```
