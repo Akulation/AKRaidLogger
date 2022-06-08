@@ -6,6 +6,9 @@ Send a discord webhook when a structure or barricade is destroyed
 -  Logs whenever a structure/barricade is destroyed
 -  Lag Free
 -  Clean looking embeds
+
+# Examples:
+![image](https://user-images.githubusercontent.com/69092135/172673959-decc8031-487f-48a3-bfab-77c4aadb8b9f.png)
  
 # Config:
   ```
@@ -20,3 +23,4 @@ https://discord.gg/YGNmCQYT3e
 
 1. Add `AkuRaidLogger.uscript` to `exampleserverfolder/uScript/scripts`
 2. Use the command `script reload` in console to load the script (or restart your server)
+
