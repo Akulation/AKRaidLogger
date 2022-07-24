@@ -1,5 +1,7 @@
-# AkuRaidLogger
+# AkuRaidLogger (Outdated)
 Send a discord webhook when a structure or barricade is destroyed
+
+# Install the newest version from https://unturnedstore.com/products/266
 
 # Features:
 -  Logs whenever a structure/barricade is destroyed
