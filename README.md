@@ -1,19 +1,23 @@
-# AkuRaidLogger (Outdated)
+# AKRaidLogger
 Send a discord webhook when a structure or barricade is destroyed
-
-# Install the newest version from https://unturnedstore.com/products/266
 
 # Features:
 -  Logs whenever a structure/barricade is destroyed
--  Lag Free
+-  Lag free
 -  Clean looking embeds
+-  Free to use
 
 # Examples:
-![image](https://user-images.githubusercontent.com/69092135/172673959-decc8031-487f-48a3-bfab-77c4aadb8b9f.png)
+![exampleimage](https://user-images.githubusercontent.com/69092135/209996896-f3e14142-3514-41a1-9342-b2ebbb3162d4.png)
  
 # Config:
   ```
-  "discord_webhook_url": "https://discord.com/api/webhooks/0000000/XXXXXXX"
+  config = {
+	"raid_webhook_url": "https://discord.com/api/webhooks/0000000/XXXXXXX",
+	"display_self_raids": "false" // true/false
+ };
+ 
+ RaidIgnoredIDs = array(386, 1130); // you can add more ignored ids here
   ```
   
   Edit the config by opening the `AkuRaidLogger.uscript` file.
@@ -22,8 +26,8 @@ Send a discord webhook when a structure or barricade is destroyed
 First make sure you have installed uScript2 on your server.
 https://discord.gg/YGNmCQYT3e
 
-1. Add `AkuRaidLogger.uscript` to `exampleserverfolder/uScript/scripts`
+1. Add `AKRaidLogger.uscript` to `exampleserverfolder/uScript/scripts`
 2. Use the command `script reload` in console to load the script (or restart your server)
 
-![AkuRaidLogger](https://user-images.githubusercontent.com/69092135/172501443-656211c5-6e9f-41ea-be22-6217b0067c13.png)
+![AKRaidLogger](https://user-images.githubusercontent.com/69092135/172501443-656211c5-6e9f-41ea-be22-6217b0067c13.png)
 
