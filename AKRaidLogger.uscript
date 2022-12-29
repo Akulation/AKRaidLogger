@@ -1,0 +1,65 @@
+// AKRaidLogger v2.0
+// Created by: Akulation
+// https://github.com/Akulation
+
+config = {
+	"raid_webhook_url": "https://discord.com/api/webhooks/0000000/XXXXXXX",
+	"display_self_raids": "false" // true/false
+};
+
+RaidIgnoredIDs = array(386, 1130); // you can add more ignored ids here
+
+//----------------------------------------------------------------//
+//           DO NOT MODIFY ANYTHING BELOW THIS LINE!
+//----------------------------------------------------------------//
+
+event onLoad() {
+    server.log("-------------------------------------");
+    server.log("AKRaidLogger loaded successfully!");
+    server.log("Created by: Akulation");
+    server.log("-------------------------------------");
+}
+
+event onBarricadeDestroy(player, barricade){
+	if(RaidIgnoredIDs.contains(barricade.id)) {
+		return;
+	}
+	posX = barricade.position.x;
+    posY = barricade.position.y;
+    posZ = barricade.position.z;
+	Embed = discordEmbed();
+	Embed.title = "Raid Detected!";
+	Embed.description = "Player: **" + player.name + "** (**" + player.id + "**) \n Object Owner: **" + barricade.owner + "** \n Object: **" + barricade.name + "** \n Object Type: **Barricade** \n Nearest Location: **" + player.nearestLocation + "** \n Exact Position: **X: " + posX + " Y: " + posY + " Z: " + posZ + "**"; 
+	Embed.color = 15277667;
+	Embed.footer.text = time.now.date + " | " + time.now.time;
+    
+	if(config["display_self_raids"] == "false") {
+		if(player.id == barricade.owner) {
+			return server.log(player.name + " (" + player.id + ") has destroyed an object owned by themselves.");
+		}
+	}
+	
+	discord.sendEmbed(config["raid_webhook_url"], Embed);
+}
+
+event onStructureDestroy(player, structure){
+	if(RaidIgnoredIDs.contains(structure.id)) {
+		return;
+	}
+	posX = structure.position.x;
+    posY = structure.position.y;
+    posZ = structure.position.z;
+	Embed = discordEmbed();
+	Embed.title = "Raid Detected!";
+	Embed.description = "Player: **" + player.name + "** (**" + player.id + "**) \n Object Owner: **" + structure.owner + "** \n Object: **" + structure.name + "** \n Object Type: **Structure** \n Nearest Location: **" + player.nearestLocation + "** \n Exact Position: **X: " + posX + " Y: " + posY + " Z: " + posZ + "**"; 
+	Embed.color = 15277667;
+	Embed.footer.text = time.now.date + " | " + time.now.time;
+    
+	if(config["display_self_raids"] == "false") {
+		if(player.id == barricade.owner) {
+			return server.log(player.name + " (" + player.id + ") has destroyed an object owned by themselves.");
+		}
+	}
+	
+	discord.sendEmbed(config["raid_webhook_url"], Embed);
+}
